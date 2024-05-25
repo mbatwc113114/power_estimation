@@ -69,3 +69,18 @@ input{
     text-align: center;
     transform:translate(-50%);
 }
+.tool{
+    display: none;
+    visibility: hidden;
+}
+
+.info-box{
+    width: 80vw;
+}
+.dp{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    
+
+}
