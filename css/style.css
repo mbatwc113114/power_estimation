@@ -13,5 +13,59 @@
 }
 
 body{
-    background-image:url();
+    background-image: url(../bg.jpg);
+}
+.box{
+    background-color: rgba(155, 155, 155, 0.5);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 2px var(--box-shadow);
+
+}
+.tool-containner{
+    height: 80vh;
+    width:80vw;
+    position: relative;
+    text-align: center;
+
+}
+h1{
+    color: var(--text-color);
+}
+hr{
+    border: none;
+    border-top: 1px solid #000;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+}
+
+label{margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+input{
+    width: 50vw;
+}
+
+
+
+
+
+.form{
+    margin-top: 8px;
+    width:70vw;
+}
+
+.btn{
+    position: absolute;
+    bottom: 10px;
+    left:50%;
+    text-align: center;
+    transform:translate(-50%);
 }
