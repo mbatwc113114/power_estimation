@@ -1,0 +1,17 @@
+:root{
+    --background-color:#505050;
+    --text-color:#a0a0a0;
+    --box-shadow:#010101;
+
+}
+
+
+
+*{
+    margin: auto;
+    padding:8px;
+}
+
+body{
+    background-image:url();
+}
