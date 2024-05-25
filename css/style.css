@@ -76,11 +76,50 @@ input{
 
 .info-box{
     width: 80vw;
+    height: 80vh;
+    position: relative;
+    
+    
 }
+.info-box input[readonly] {
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    color:var(--text-color); /* adjust the text color to match your theme */
+    cursor: default; /* remove the pointer cursor */
+    padding: 0; /* remove any padding */
+    width:50%; 
+    right:0;
+    float:right;
+  }
+.info-box label{
+    float: left;
+    font-size: 16px;
+    
+}
+
 .dp{
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    
 
+
+}
+
+
+.social-link{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    padding: 2px;
+    height: 60px;
+
+    
+}
+.icon{
+    border-radius: 50%;
+    height:50px;
+    width: 50px;
 }
