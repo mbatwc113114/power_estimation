@@ -7,12 +7,76 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="auth" id="auth">
+        <!-- welcome box -->
+        <div class="box welcome" id="welcomeBox">
+            <h1>Welcome</h1>
+            <p class="quote">this is the old village 
+            </p>
+            <h2>join us</h2>
+            <input type="button" value="join" class="btn-green">
+            <img src="green.jpeg" alt="" class="figure">
+
+        </div>
+
+
+        <!-- login page start -->
+        <div class="box login" id="loginBox">
+            <form id="loginForm" name="loginForm" action="" method="">
+                <h1>login</h1>
+                <hr>
+                <br>
+                <br>
+            
+                <input type="text" class="auth-input" id="loginUsername" name="username" placeholder="username">
+                <br>
+            
+                <input type="email" class="auth-input" name="email" id="loginEmail" placeholder="email">
+
+                <br>
+
+                <input type="password" name="password" id="loginPassword" class="auth-input" placeholder="password">
+                <br>
+                <input type="submit" value="login" class="login-btn" id="loginBtn">
+            </form>
+        </div>
+<!-- login page end -->
+
+
+
+<!-- resistor page start  -->
+<div class="box join" id="joinBox">
+    <form id="joinForm" name="joinForm" action="" method="">
+        <h1>join</h1>
+        <hr>
+        <br>
+        <br>
+    
+        <input type="text" class="auth-input" id="joinUsername" name="username" placeholder="username">
+        <br>
+    
+        <input type="email" class="auth-input" name="email" id="joinEmail" placeholder="email">
+
+        <br>
+
+        <input type="password" name="password" id="joinPassword" class="auth-input" placeholder="password">
+        <br>
+        <input type="submit" value="login" class="login-btn" id="loginBtn">
+    </form>
+</div>
+<!-- resistor page end -->
+
+
+    </div>
+<!-- auth end -->
+
+
     <div class="tool" id="tool">
     <div class="box tool-containner">
         <button class="box action-btn" id="infoBtn">i</button>
         <h1>Power Estimator</h1>
         <hr>
-        <div class="box form">
+        <div class="box-inside form">
             <form action="" id="Form">
                 
                 
@@ -27,10 +91,10 @@
             
             <!-- <input type="button" class="box btn" value="reset"> -->
         </form>
-        <div class="box btn">
+        <div class="box-inside btn">
         
-            <input type="button" class="box" id="addComponent" value="+ add">
-            <input class="box" type="button" value="calculate" id="calculate">
+            <input type="button" class="btn-green" id="addComponent" value="+ add">
+            <input class="btn-blue" type="button" value="calculate" id="calculate">
         </div>
     </div>
 
@@ -60,7 +124,7 @@
     <label for="skill">tools used</label>
     <input type="" name="skill" id="" value="Html, CSS, JavaScript, Firbase" readonly>
 
-    <div class="box social-link">
+    <div class="box-inside social-link">
         <a href="https://www.linkedin.com/in/aman-choudhary-5512372a7/"><img class="icon" src="linkedin.png" alt=""></a>
     </div>
 </div>

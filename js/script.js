@@ -5,6 +5,39 @@ const infoBtn=document.getElementById("infoBtn")
 
 const addComponent = document.getElementById("addComponent")
 
+// adding auth components
+const loginBox= document.getElementById("loginBox");
+const joinBox = document.getElementById("joinBox");
+const welcomeBox = document.getElementById("welcomeBox");
+const authBox = document.getElementById("auth")
+
+// check authstatus and set the layout
+function check_auth(){
+
+  let authStatus = false;
+  // condition of authentication 
+  if (authStatus){
+    authBox.classList.add("disable");
+    // loginBox.classList.add("disable");
+    // joinBox.classList.add("disable");
+  }else{
+    authBox.classList.remove("disable");
+    tool.classList.add("disable");
+    info.classList.add("disable");
+    loginBox.classList.add("disable");
+    joinBox.classList.add("disable");
+    welcomeBox.classList.remove("disable");
+  }
+}
+
+
+
+
+
+
+
+
+
 back.addEventListener("click",()=>{
     info.classList.add("disable");
     tool.classList.remove("disable");
@@ -128,3 +161,5 @@ const form = document.getElementById('Form');
   });
 
 
+
+  check_auth()

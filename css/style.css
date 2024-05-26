@@ -2,10 +2,22 @@
     --background-color:#505050;
     --text-color:#ffffff;
     --box-shadow:#010101;
-
+    --box-transparent: rgba(155, 155, 155, 0.3);
+    --box-inside-transparent: rgba(155, 155, 155, 0.1);
+    --input-background:rgba(181, 181, 181, 0.1);
 }
-
-
+/* 
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('your-image-url');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  } */
 
 *{
     margin: auto;
@@ -14,23 +26,46 @@
 
 body{
     background-image: url(../bg.jpg);
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    
 }
-.box{
-    background-color: rgba(155, 155, 155, 0.3);
+.box-inside{
+    background-color: var(--box-inside-transparent);
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 20px;
+    padding: 10px;
     /* filter:blur(2px); */
-    width: 50%;
+    
     
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 0 15px 2px var(--box-shadow);
-    backdrop-filter:blur(2px);
+    /* backdrop-filter:blur(1px); */
+
+}
+.box{
+    background-color: var(--box-transparent);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
+    /* filter:blur(2px); */
+   
+    
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 2px var(--box-shadow);
+    backdrop-filter:blur(4px);
 
 }
 .tool-containner{
-    height: 85vh;
+    height: 90vh;
     width:80vw;
     position: relative;
     text-align: center;
@@ -40,6 +75,7 @@ h1 {
     background-image: linear-gradient(to left, #e6db09, #e31f57, #d60de4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 40px;
   }
 /* 
 h1{
@@ -60,7 +96,6 @@ label{margin: 0;
 input{
     width: 50vw;
 }
-
 
 
 
@@ -150,34 +185,25 @@ input{
 }
 
 .component-input::placeholder{
-    color:hsl(284, 82%, 30%);
+    color: #000;
+    font-size: 16px;
     font-weight: bold;
 }
 .component-input{
-    width: 50vw;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: var(--text-color);
+    border-radius:10px;
+    background-color:var(--input-background);
     border: 0;
-    margin: 2px;
-    transition: 0.5s linear;
+    width: 50vw;
+    backdrop-filter: blur(1px);
+    color:#ffffff;
+    margin: 5px;
+    transition: 0.5s;
 }
 .component-input:focus{
-    outline: none;
+    outline: 0;
+    width:60vw;
 }
-.component-input:hover{
-    width:55vw;
-    /* outline: none; */
-    border-radius: 2px;
-    background-color: rgba(55, 55, 55, 0.5);
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: var(--text-color);
-    border: none;
-    margin: 2px;  
-}
+
 .cross{
     padding: 2px;
     height:25px;
@@ -187,4 +213,72 @@ input{
     font-size: 16px;
     color:#000;
     text-align: centers;
+}
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:80vw;
+    height:80vh;
+}
+
+.auth-input{
+    border-radius:10px;
+    background-color:var(--input-background);
+    border: 0;
+    width: 50vw;
+    backdrop-filter: blur(1px);
+    color:#ffffff;
+    margin: 5px;
+    transition: 0.5s;
+}
+
+.auth-input::placeholder{
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+}
+.auth-input:focus{
+    outline: 0;
+    width:60vw;
+}
+
+.login-btn{
+border-radius: 10px;
+border: 0;
+margin-top: 50px;
+color:red;
+font-size: 20px;
+font-weight: bold;
+/* background-image: linear-gradient(to bottom, #9e9a4e, #e31f57, #d60de4); */
+    
+}
+
+.btn-green{
+    border-radius: 10px;
+    border: 0;
+    margin:2px;
+    color:green;
+    font-size: 20px;
+    font-weight: bold;
+    /* background-image: linear-gradient(to bottom, #9e9a4e, #e31f57, #d60de4); */
+        
+    }
+
+    .btn-blue{
+        border-radius: 10px;
+        border: 0;
+        margin: 2px;
+        color:blue;
+        font-size: 20px;
+        font-weight: bold;
+        /* background-image: linear-gradient(to bottom, #9e9a4e, #e31f57, #d60de4); */
+            
+        }
+
+
+
+.figure{
+    height:50vh;
+    
 }
