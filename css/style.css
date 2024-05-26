@@ -1,6 +1,6 @@
 :root{
     --background-color:#505050;
-    --text-color:#a0a0a0;
+    --text-color:#ffffff;
     --box-shadow:#010101;
 
 }
@@ -16,27 +16,35 @@ body{
     background-image: url(../bg.jpg);
 }
 .box{
-    background-color: rgba(155, 155, 155, 0.5);
+    background-color: rgba(155, 155, 155, 0.3);
     background-size: cover;
     background-repeat: no-repeat;
     padding: 20px;
+    /* filter:blur(2px); */
     width: 50%;
-    margin: 0 auto;
+    
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 0 15px 2px var(--box-shadow);
+    backdrop-filter:blur(2px);
 
 }
 .tool-containner{
-    height: 80vh;
+    height: 85vh;
     width:80vw;
     position: relative;
     text-align: center;
 
 }
+h1 {
+    background-image: linear-gradient(to left, #e6db09, #e31f57, #d60de4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+/* 
 h1{
     color: var(--text-color);
-}
+} */
 hr{
     border: none;
     border-top: 1px solid #000;
@@ -60,18 +68,20 @@ input{
 .form{
     margin-top: 8px;
     width:70vw;
+    height:65vh;
+    overflow:auto;
 }
 
 .btn{
-    position: absolute;
-    bottom: 10px;
-    left:50%;
+    padding:4px;
+    width:80vw;
+    display:flex;
     text-align: center;
-    transform:translate(-50%);
+   
 }
+
 .tool{
-    display: none;
-    visibility: hidden;
+
 }
 
 .info-box{
@@ -83,6 +93,7 @@ input{
 }
 .info-box input[readonly] {
     font-size: 16px;
+    font-weight: bold;
     border: none;
     background-color: transparent;
     color:var(--text-color); /* adjust the text color to match your theme */
@@ -122,4 +133,58 @@ input{
     border-radius: 50%;
     height:50px;
     width: 50px;
+}
+.action-btn{
+    font-size: 20px;
+    font-weight: bold;
+    border: 0;
+    width: 20px;
+    height: 20px;
+    float:right;
+    padding: 0;
+}
+
+.disable{
+    display:none;
+    visibility:hidden;
+}
+
+.component-input::placeholder{
+    color:hsl(284, 82%, 30%);
+    font-weight: bold;
+}
+.component-input{
+    width: 50vw;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--text-color);
+    border: 0;
+    margin: 2px;
+    transition: 0.5s linear;
+}
+.component-input:focus{
+    outline: none;
+}
+.component-input:hover{
+    width:55vw;
+    /* outline: none; */
+    border-radius: 2px;
+    background-color: rgba(55, 55, 55, 0.5);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--text-color);
+    border: none;
+    margin: 2px;  
+}
+.cross{
+    padding: 2px;
+    height:25px;
+    width: 25px;
+    font-weight: bold;
+
+    font-size: 16px;
+    color:#000;
+    text-align: centers;
 }

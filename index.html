@@ -7,48 +7,46 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="tool">
+    <div class="tool" id="tool">
     <div class="box tool-containner">
+        <button class="box action-btn" id="infoBtn">i</button>
         <h1>Power Estimator</h1>
         <hr>
         <div class="box form">
-            <form action="">
-                <div class="component">
+            <form action="" id="Form">
+                
+                   
                 <label for="component">
                     component
                 </label>
-                
-                <input type="text">
-                <input type="number"  name="amount" id="amount">
-                <div></div>
-            </div>
-            <hr>
-            <div class="add-component">
-                <button class="box">+ add</button>
-            </div>
-           
-
 
         </div>
 
 
         
-            <input class="box btn" type="button" value="calculate">
+            
             <!-- <input type="button" class="box btn" value="reset"> -->
         </form>
+        <div class="box btn">
+        
+            <input type="button" class="box" id="addComponent" value="+ add">
+            <input class="box" type="button" value="calculate" id="calculate">
+        </div>
     </div>
 
-    <div class="box">
-        info
-    </div>
+    
+    
+    
 </div>
 
     <!-- info page -->
-<div class="info">
+<div class="info disable" id="info">
 <div class="box info-box">
-    <img src="" alt="" class="back">
+    <button class="box action-btn" id="back">x</button>
+    <br>
     <img class="dp" src="dp.jpg" alt="">
     <br>
+    
     <label for="name">Name</label><input type="text" value="Aman Choudhary" readonly>
     <br><br>
     <label for="age">Age</label><input type="number" value="20" readonly>
@@ -70,5 +68,6 @@
 </div>
 
 
+<script src="js/script.js"></script>
 </body>
 </html>
